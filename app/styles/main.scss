@@ -1,0 +1,58 @@
+@import "compass_twitter_bootstrap";
+@import "animate";
+
+.transition {
+    -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-fill-mode: both;
+     -moz-transition-fill-mode: both;
+       -o-transition-fill-mode: both;
+          transition-fill-mode: both;
+}
+
+.yellow {
+  background-color: #fcb040;
+}
+.blue {
+  background-color: #68c8c6;
+}
+.green {
+  background-color: #72c166;
+}
+.red {
+  background-color: #ef4138;
+}
+
+#container {
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  left: 50%;
+  top: 50%;
+  margin: -10% 0 0 -40%;
+}
+.tweet {
+  img {
+    border: 5px solid white;
+    margin: 1% 2% 15%;
+    float: left;
+  }
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  h2 {
+    font-size: 18px;
+    text-align: right;
+    color: #fff;
+    font-style: italic;
+    margin-top: 3%;
+    span {
+      margin-left: 10px;
+      font-weight: normal;
+      color: #eee;
+    }
+  }
+}
