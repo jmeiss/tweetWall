@@ -12,6 +12,7 @@
 
 
 body {
+  overflow: hidden;
   font-family: 'Roboto';
   color: #000;
 }
@@ -47,15 +48,15 @@ body {
   }
 }
 #made-with-love {
-  margin: 134px 0 0 20px;
-  font-size: 24px;
+  margin: 128px 0 0 20px;
+  font-size: 34px;
   float: left;
   color: #fff;
 }
 #share-on-twitter {
   float: right;
-  font-size: 40px;
-  margin: 129px 50px 0 0;
+  font-size: 60px;
+  margin: 120px 50px 0 0;
   span {
     font-family: 'Designosaur';
     color: #fff;
@@ -68,8 +69,8 @@ body {
     float: left;
   }
   h1 {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 70px;
+    line-height: 80px;
   }
   h2 {
     font-size: 26px;

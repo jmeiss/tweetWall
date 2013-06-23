@@ -67,7 +67,7 @@ angular.module('tweetwallApp')
         $scope.visible = true
       })
       
-      $timeout(fetchTweets, 8000)
+      $timeout(fetchTweets, 3000000)
     }
     fetchTweets()
 
