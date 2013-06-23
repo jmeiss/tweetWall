@@ -3,7 +3,7 @@
 angular.module('tweetwallApp')
   .controller('MainCtrl', function ($scope, $http, $timeout, $route) {
 
-    var nbTweetsToLoad = 11
+    var nbTweetsToLoad = 20
     var url = '../twitter-proxy.php?url=' + encodeURIComponent('search/tweets.json?q=USI2013&count=' + nbTweetsToLoad)
     var cssClassArray = [
       '#fcb040',

@@ -1,6 +1,21 @@
 @import "compass_twitter_bootstrap";
 @import "animate";
 
+@font-face {
+  font-family: 'Designosaur';
+  src: url('fonts/designosaur/Designosaur-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+
+body {
+  font-family: 'Roboto';
+  color: #000;
+}
+
 .transition {
     -webkit-transition-duration: 0.5s;
      -moz-transition-duration: 0.5s;
@@ -12,47 +27,60 @@
           transition-fill-mode: both;
 }
 
-.yellow {
-  background-color: #fcb040;
-}
-.blue {
-  background-color: #68c8c6;
-}
-.green {
-  background-color: #72c166;
-}
-.red {
-  background-color: #ef4138;
-}
 
 #container {
   position: absolute;
   width: 80%;
   height: 60%;
   left: 50%;
-  top: 50%;
+  top: 40%;
   margin: -10% 0 0 -40%;
+}
+#footer {
+  position: absolute;
+  padding: 0 20px 20px;
+  height: 163px;
+  bottom: 0;
+  width: 100%;
+  img {
+    float: left;
+  }
+}
+#made-with-love {
+  margin: 130px 0 0 20px;
+  font-size: 24px;
+  float: left;
+  color: #fff;
+}
+#share-on-twitter {
+  float: right;
+  font-size: 40px;
+  margin: 120px 50px 0 0;
+  span {
+    font-family: 'Designosaur';
+    color: #fff;
+  }
 }
 .tweet {
   img {
     border: 5px solid white;
-    margin: 1% 2% 15%;
+    margin: 1% 2% 25%;
     float: left;
   }
   h1 {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 60px;
+    line-height: 70px;
   }
   h2 {
-    font-size: 18px;
+    font-size: 26px;
     text-align: right;
     color: #fff;
     font-style: italic;
     margin-top: 3%;
     span {
-      margin-left: 10px;
       font-weight: normal;
-      color: #eee;
+      font-size: 20px;
+      color: #000;
     }
   }
 }
