@@ -89,7 +89,7 @@ angular.module('tweetwallApp')
         getTweet()
       })
 
-      $timeout(fetchTweets, 10 * 60 * 1000)
+      $timeout(fetchTweets, 30 * 1000)
     }
     fetchTweets()
 
