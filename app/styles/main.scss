@@ -1,19 +1,10 @@
 @import "compass_twitter_bootstrap";
 @import "animate";
 
-@font-face {
-  font-family: 'Designosaur';
-  src: url('fonts/designosaur/Designosaur-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  src: url('fonts/roboto/Roboto-Regular.ttf') format('truetype');
-}
-
 
 body {
   overflow: hidden;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   color: #000;
 }
 
@@ -58,7 +49,6 @@ body {
   font-size: 60px;
   margin: 120px 50px 0 0;
   span {
-    font-family: 'Designosaur';
     color: #fff;
   }
 }

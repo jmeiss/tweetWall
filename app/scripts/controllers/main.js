@@ -3,7 +3,7 @@
 angular.module('tweetwallApp')
   .controller('MainCtrl', function ($scope, $http, $timeout, $route) {
 
-    var nbTweetsToLoad = 20
+    var nbTweetsToLoad = 50
     var url = '../twitter-proxy.php?url=' + encodeURIComponent('search/tweets.json?q=USI2013&count=' + nbTweetsToLoad)
     var cssClassArray = [
       '#fcb040',
@@ -53,21 +53,24 @@ angular.module('tweetwallApp')
       return {show:'animated ' + ngAnimate[0], hide:'animated ' + ngAnimate[1]}
     }
 
-    var fetchTweets = function () {
-      $scope.visible = false
+    var getTweet = function () {
       var tweetRandPos = Math.floor(Math.random() * nbTweetsToLoad)
 
-      $http.get(url).then(function (data) {
-        var tweet = data.data.statuses[tweetRandPos]
-
-        $scope.tweet = tweet
-        $scope.tweetDate = moment($scope.tweetDate).fromNow()
-        $scope.newBackgroundColor = getNewBackgroundColor()
-        $scope.nextAnimation = getNextAnimation()
-        $scope.visible = true
-      })
+      $scope.tweet = $scope.tweets[tweetRandPos]
+      $scope.tweetDate = moment($scope.tweetDate).fromNow()
+      $scope.newBackgroundColor = getNewBackgroundColor()
+      $scope.nextAnimation = getNextAnimation()
       
-      $timeout(fetchTweets, 3000000)
+      $timeout(getTweet, 5000)
+    }
+
+    var fetchTweets = function () {
+      $http.get(url).then(function (data) {
+        $scope.tweets = data.data.statuses
+        getTweet()
+      })
+
+      $timeout(fetchTweets, 10 * 60 * 1000)
     }
     fetchTweets()
 
